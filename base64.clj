@@ -21,9 +21,9 @@
 (defn get-ascii [int] 
     (cond (< int 25)    (+ int 65)
      (> int 25)    (+ int 71)))
-
+(defn [str] 
  (map #(char (get-ascii (Integer/parseInt % 2))) 
-    (map clojure.string/join (sextets (reduce str (map clojure.string/join (pad (sextets (get-binary-string "Ma"))))))))
+    (map clojure.string/join (sextets (reduce str (map clojure.string/join (pad (sextets (get-binary-string str)))))))))
 
 
 
